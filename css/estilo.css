@@ -10,8 +10,38 @@
 
 body {
     min-height: 1000px;
-
+    background: #16161a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 50%);
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 35%);
+    z-index: -1;
+}
+
+/* Header */
 
 header {
     position: fixed;
@@ -25,8 +55,10 @@ header {
     justify-content: flex-end;
     align-items: center;
     transition: 1s;
+    z-index: 1;
 }
 
+/* Sticky es el ejecto */
 header.sticky {
     height: 80px;
 }
@@ -42,7 +74,7 @@ header .banner {
 }
 
 header.sticky .banner {
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 header .logo {
@@ -96,19 +128,96 @@ nav ul li a:hover {
     color: #ff275f;
 }
 
+/* Cuerpo de pagina */
 section {
-    margin-top: 50vh;
+    margin-top: 40vh;
+    margin-bottom: 30vh;
     padding: 100px;
+    position: relative;
+    width: 90%;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
 }
 
 section h2 {
-    font-size: 3em;
+    font-size: 2.5em;
+    color: #2785ff;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 section p {
     font-size: 1.2em;
     text-align: justify;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* fotos de muestra */
+
+.container {
+    margin-bottom: 30vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+.container .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    background: #444;
+    margin: 0 20px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+    background-size: 40px 40px;
+    filter: grayscale(1);
+    animation: animateBg 2s linear infinite;
+    animation-play-state: paused;
+    transition: filter 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+.container .box:nth-child(2) {
+    background: linear-gradient(180deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+    background-size: 40px 40px;
+}
+
+.container .box:nth-child(3) {
+    background: linear-gradient(135deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+    background-size: 40px 40px;
+}
+
+.container img {
+    width: 80%;
+}
+
+.container .poppy {
+    width: 130%;
+    margin-left: -40px;
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0;
+    }100% {
+        background-position: 40px 20px;
+    }
 }
 
 /* responsive */
