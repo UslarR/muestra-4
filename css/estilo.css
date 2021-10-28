@@ -167,6 +167,7 @@ section p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
 }
 
@@ -203,8 +204,15 @@ section p {
     background-size: 40px 40px;
 }
 
-.container img {
-    width: 80%;
+.container .box img {
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    transition: height 0.5s;
+}
+
+.container .box:hover img {
+    height: 450px;
 }
 
 @keyframes animateBg {
@@ -281,5 +289,13 @@ section p {
 
     section h2 {
         font-size: 2em;
+    }
+
+    .container {
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent);
+    }
+
+    .container .box {
+        margin-bottom: 50px;
     }
 }
