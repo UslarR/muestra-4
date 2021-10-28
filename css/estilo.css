@@ -177,7 +177,7 @@ section p {
     background: #444;
     margin: 0 20px;
     border-radius: 20px;
-    background: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+    background: linear-gradient(45deg, #f4f804 25%, #444 25%, #444 50%, #f4f804 50%, #f4f804 75%, #444 75%, #444 100%);
     background-size: 40px 40px;
     filter: grayscale(1);
     animation: animateBg 2s linear infinite;
@@ -194,22 +194,17 @@ section p {
 }
 
 .container .box:nth-child(2) {
-    background: linear-gradient(180deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
-    background-size: 40px 40px;
+    background: linear-gradient(180deg, #ffc400 25%, #444 25%, #444 50%, #ffc400 50%, #ffc400 75%, #444 75%, #444 100%);
+    background-size: 50px 50px;
 }
 
 .container .box:nth-child(3) {
-    background: linear-gradient(135deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+    background: linear-gradient(135deg, #5300b3 25%, #444 25%, #444 50%, #5300b3 50%, #5300b3 75%, #444 75%, #444 100%);
     background-size: 40px 40px;
 }
 
 .container img {
     width: 80%;
-}
-
-.container .poppy {
-    width: 130%;
-    margin-left: -40px;
 }
 
 @keyframes animateBg {
