@@ -223,6 +223,12 @@ section p {
     }
 }
 
+/* Pie de pagina */
+
+footer {
+    
+}
+
 /* responsive */
 
 @media (max-width: 991px) {
